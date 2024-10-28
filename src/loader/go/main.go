@@ -59,6 +59,8 @@ func main() {
 		os.Exit(1)
 	}
 
+	fmt.Println("XDP program loaded...")
+
 	// Make a signal.
 	sigc := make(chan os.Signal, 1)
 	signal.Notify(sigc, syscall.SIGINT, syscall.SIGTERM)
